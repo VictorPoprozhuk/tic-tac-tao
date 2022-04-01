@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  font-family: "Pacifico";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.game__wrapper {
+  margin: 0 auto;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background: rgba(92, 138, 238, 0.8);
+}
+.game__wrapper h1 {
+  font-weight: 400;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.game__wrapper .score__players {
+  display: flex;
+  gap: 30px;
+  font-size: 45px;
+  font-family: "Send Flowers", cursive;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.game__wrapper .score__players::before {
+  content: "X";
+}
+.game__wrapper .score__players::after {
+  content: "0";
+}
+.game__wrapper .score__players::before, .game__wrapper .score__players::after {
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgb(243, 174, 174);
+}
+.game__wrapper .area {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-wrap: wrap;
+  background-color: #f1f0a3;
+}
+.game__wrapper .area .box {
+  font-family: "Send Flowers", cursive;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  font-size: 90px;
+  text-align: center;
+  line-height: 1.1;
+  cursor: pointer;
+}
+
+.modal-result-wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Send Flowers", cursive;
+}
+.modal-result-wrapper .overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal-result-wrapper .modal-window {
+  position: absolute;
+  width: 300px;
+  height: 270px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c0e46c;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 50% 50% 20px 20px;
+  overflow: hidden;
+}
+.modal-result-wrapper .modal-window .content {
+  font-size: 40px;
+  padding-top: 30px;
+  cursor: default;
+}
+.modal-result-wrapper .modal-window .btn-close {
+  padding: 20px;
+  background: red;
+  font-size: 30px;
+  cursor: pointer;
+}

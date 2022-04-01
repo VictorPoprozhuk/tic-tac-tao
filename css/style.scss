@@ -10,8 +10,9 @@
 body {
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
+   justify-content: center;
    min-height: 100vh;
+   margin: 0;
    background: rgba(0, 0, 0, 0.3);
 }
 .game__wrapper {
@@ -119,6 +120,19 @@ body {
          background: red;
          font-size: 30px;
          cursor: pointer;
+      }
+   }
+}
+
+@media screen and (max-width: 390px) {
+   .game__wrapper {
+      .area {
+         width: 250px;
+         height: 250px;
+         .box {
+            width: (250px / 3);
+            height: (250px / 3);
+         }
       }
    }
 }

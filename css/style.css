@@ -105,7 +105,6 @@ body {
 .modal-result-wrapper .modal-window .content {
   font-size: 40px;
   padding-top: 30px;
-  cursor: default;
 }
 .modal-result-wrapper .modal-window .btn-close {
   padding: 20px;
@@ -122,5 +121,7 @@ body {
   .game__wrapper .area .box {
     width: 83.3333333333px;
     height: 83.3333333333px;
+    font-size: 60px;
+    line-height: 1.4;
   }
 }

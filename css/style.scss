@@ -112,7 +112,7 @@ body {
       .content {
          font-size: 40px;
          padding-top: 30px;
-         cursor: default;
+         // cursor: default;
       }
 
       .btn-close {
@@ -132,6 +132,8 @@ body {
          .box {
             width: (250px / 3);
             height: (250px / 3);
+            font-size: 60px;
+            line-height: 1.4;
          }
       }
    }

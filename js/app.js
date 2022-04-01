@@ -10,20 +10,18 @@ let score_0_value = 0;
 let score_X_value = 0;
 let step = 0;
 let result = '';
-let arr = [];
+let arrDraw = [];
 area.addEventListener('click', (e) => {
    if ((e.target.className = 'box')) {
       if (!e.target.innerHTML) {
          step % 2 === 0
             ? (e.target.innerHTML = 'X')
             : (e.target.innerHTML = '0');
+         arrDraw.push('1');
          step++;
          check();
-         arr.push('1');
-         if (arr.length >= 9) {
-            drawResult();
-         }
       }
+      console.log(arrDraw.length);
    }
 });
 const check = () => {
@@ -48,6 +46,7 @@ const check = () => {
          result = 'X';
          prepareREsult(result);
          score_X_value++;
+         arrDraw = [];
       } else if (
          boxes[arr[i][0]].innerHTML === '0' &&
          boxes[arr[i][1]].innerHTML === '0' &&
@@ -56,7 +55,8 @@ const check = () => {
          result = '0';
          prepareREsult(result);
          score_0_value++;
-      }
+         arrDraw = [];
+      } else if (arrDraw.length >= 9) drawResult();
    }
 };
 
@@ -67,7 +67,7 @@ const prepareREsult = (winner) => {
 const drawResult = () => {
    content.textContent = `draw`;
    modal.style.display = 'block';
-   arr = [];
+   arrDraw = [];
 };
 
 btn.addEventListener('click', () => {
